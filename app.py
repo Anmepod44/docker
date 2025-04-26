@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define a route for the root URL
 @app.route('/')
 def hello_world():
-    return 'Hello, World! This is the Flask app running in a Docker container.'
+    return 'Hello, World! This is the Flask app running in a Docker container. This is the second version Deji update!'
 
 if __name__ == '__main__':
     # Run the app in debug mode
