@@ -10,6 +10,6 @@ COPY . .
 EXPOSE 5000
 
 # Install the requirements
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirement_is.txt
 
 CMD ["python3", "app.py"]
