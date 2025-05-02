@@ -1,9 +1,11 @@
+version: "3.8"
+
 services:
   web:
     build: .
     ports:
       - "8000:8000"
-    name: web-app
+    container_name: web-app
     networks:
       - net
     environment:
@@ -18,7 +20,7 @@ services:
   db:
     image: postgres:13
     restart: always
-    name: postgres-db
+    container_name: postgres-db
     networks:
       - net
     volumes:
@@ -30,10 +32,9 @@ services:
     ports:
       - "5432:5432"
 
-  networks:
-    net:
-      driver: bridge
+networks:
+  net:
+    driver: bridge
 
-  volumes:
-    db-data:
-    web-data:
+volumes:
+  db-data:
