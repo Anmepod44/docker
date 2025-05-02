@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   web:
-    build: .
+    image: adedejitokunbo/class23:latest
     ports:
       - "8000:8000"
     container_name: web-app
