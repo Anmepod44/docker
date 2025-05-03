@@ -1,0 +1,16 @@
+# vulnerable-app1/Dockerfile
+
+FROM ubuntu:20.04
+
+ENV DB_USER=admin
+ENV DB_PASS=SuperSecret123
+
+RUN apt-get update && apt-get install -y \
+    curl \
+    python3 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY . /app
+WORKDIR /app
+
+CMD ["python3", "app.py"]
