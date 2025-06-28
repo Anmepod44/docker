@@ -13,3 +13,5 @@ EXPOSE 5000
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python3", "app.py"]
+
+# This should trigger a build from code pipeline
